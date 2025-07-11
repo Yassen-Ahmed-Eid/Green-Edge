@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+     <!-- Site Metas -->
+    <title>Green Aura</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="logo" class="navbar-brand" href="index.html"><img src="images/logos/logo.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a id="nav_item" class="active"  href="index-Kiswahili.html">Nyumbani</a></li>
+                        <li><a id="nav_item"  href="about-Kiswahili.html">Kuhusu</a></li>
+                        <li><a id="nav_item" href="problem-Kiswahili.html">Tatizo</a></li>
+                        <li><a id="nav_item" href="shop-Kiswahili.html">Duka</a></li>
+                        <li><a id="nav_item" href="Monitor-Kiswahili.html">Kisogezi</a></li>
+                        <li><a id="nav_item" href="Educational-Kiswahili.html">Elimu</a></li>
+                        <li><a id="nav_item" href="team-Kiswahili.html">Wajumbe wa Timu</a></li>
+				            		<li><a id="nav_item" href="contact-Kiswahili.html">Mawasiliano</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	 <div class="overlay"></div>
+
+  <div class="card">
+    <h2>Chagua Lugha</h2>
+    <button class="language-btn" onclick="selectLanguage('sw')">Kiswahili </button>
+    <button class="language-btn" onclick="selectLanguage('en')">English</button>
+  </div>
+
+<script>
+function selectLanguage(lang) {
+  if (lang === 'sw') {
+    // إعادة التوجيه لصفحة السواحلية
+    window.location.href = 'index-Kiswahili.html';
+  } else {
+    // إعادة التوجيه لصفحة الإنجليزية
+    window.location.href = 'index.html';
+  }
+}
+// لما تدوس على أي مكان في الصفحة
+document.addEventListener('click', function(event) {
+  const card = document.querySelector('.card');
+  const overlay = document.querySelector('.overlay');
+
+  // لو النقرة مش على الكارت ولا جواه (بمعنى بره الكارت)
+  if (!card.contains(event.target)) {
+    // أخفي الكارت والـ overlay
+    card.style.display = 'none';
+    overlay.style.display = 'none';
+  }
+});
+
+</script>
+
+  <style>
+    /* خلفية مظللة */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
+
+    /* الكارت */
+    .card {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      z-index: 1001;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .language-btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      background-color: #0a9d18;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .language-btn:hover {
+      background-color: #00b34b;
+    }
+  </style>
+	<div class="slider-area">
+		<div class="slider-wrapper owl-carousel">
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-one">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+<h1 class="homepage-three-title">Kubadilisha <span>Uhifadhi wa Matunda Mbichi</span> Tanzania</h1>
+<h2>Hifadhi matunda na mboga kwa usahihi — udhibiti wa hali ya joto na unyevu kwa wakati halisi ili kuzipatia uhai zaidi.</h2>
+
+								<div class="slider-content-btn">
+									<a class="button btn btn-light btn-radius btn-brd" href="Shop.html">Duka</a>
+									<a class="button btn btn-light btn-radius btn-brd" href="Mentoring.html">Ushauri</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+<h1 class="homepage-three-title">Kubadilisha <span>Uhifadhi wa Matunda Mbichi</span> Tanzania</h1>
+<h2>Dumisha viwango bora vya joto na unyevu ili kuongeza muda wa kuhifadhi matunda na mboga zako.</h2>
+								<div class="slider-content-btn">
+									<a class="button btn btn-light btn-radius btn-brd" href="Shop.html">Duka</a>
+									<a class="button btn btn-light btn-radius btn-brd" href="Mentoring.html">Ushauri</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-three">
+				<div class="container">
+					<div class="row">
+						<div class="slider-content-area">
+							<div class="slide-text">
+<h1 class="homepage-three-title">Kubadilisha <span>Uhifadhi wa Matunda Mbichi</span> Tanzania</h1>
+<h2>Hakikisha ubichi kwa ufuatiliaji wa hali ya joto na unyevu unaoendelea kwa ajili ya matunda na mboga zako.</h2>
+
+								<div class="slider-content-btn">
+									<a class="button btn btn-light btn-radius btn-brd" href="Shop.html">Duka</a>
+									<a class="button btn btn-light btn-radius btn-brd" href="Mentoring.html">Ushauri</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div id="about" class="section wb">
+    <div class="container">
+        <div class="row">
+            <!-- Text Content -->
+            <div class="col-md-6">
+                <div class="message-box">
+                    <h4 class="first">Kuhusu Sisi</h4>
+<h2>Ufumbuzi wa kuhifadhi joto wa hali ya juu kuhifadhi matunda mbichi Tanzania.</h2>
+<p class="lead">
+  Tunatengeneza mfumo wa kuhifadhi joto mahiri Tanzania unaolenga kuhifadhi ubichi wa matunda na mboga kwa kufuatilia na kudhibiti joto na unyevu kwa wakati halisi.  
+  <br>
+  Mfumo wetu unahakikisha hali bora za kuhifadhi ili kupunguza kuoza na kuongeza muda wa uhifadhi, kusaidia wakulima na wasambazaji kudumisha ubora katika mnyororo wa usambazaji.  
+  <br>
+  Kwa kuunganisha sensa mahiri na udhibiti wa hali ya hewa wa moja kwa moja, tunawasaidia wazalishaji wa eneo hilo kwa teknolojia inayowahifadhi matunda yao fresh, kupunguza taka, na kuongeza faida.
+</p>
+<p></p>
+
+                    <a href="about.html" class="btn btn-light btn-radius btn-brd grd1">Jifunze Zaidi</a>
+                </div><!-- end messagebox -->
+            </div><!-- end col -->
+
+            <!-- Image Content -->
+            <div class="col-md-6">
+                <div class="post-media wow fadeIn">
+                    <img src="uploads/about_01.jpg" alt="Kilimo mahiri Sierra Leone" class="img-responsive img-rounded">
+                </div><!-- end media -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+        <br><br>
+    </div><!-- end container -->
+</div><!-- end section -->
+
+               
+    <!-- end service -->
+</div><!-- end row -->
+<div class="parallax section noover" data-stellar-background-ratio="0.7" style="background-image:url('uploads/parallax_05.png');">
+<div class="container">
+<div class="row text-center">
+    <div class="col-md-6" Team>
+        <div class="customwidget text-left" id="App">
+            <h1>Mfumo wa Elimu</h1>
+            <p>Mfumo huu unafundisha jinsi ya kudhibiti roboti wa kilimo na kusoma sensa kama chumvi ya udongo na viwango vya gesi ili kuboresha kilimo. Ni rahisi kutumia na husaidia watumiaji kuelewa teknolojia za kilimo mahiri.</p>
+            <ul class="list-inline">
+                <li><i class="fa fa-check"></i>Rahisi kwa mtumiaji</li>
+                <li><i class="fa fa-check"></i>Safu na mwingiliano wazi</li>
+                <br></br>
+                <li><i class="fa fa-check"></i>Mafunzo ya vitendo</li>
+                <li><i class="fa fa-check"></i>Hueleza kilimo mahiri</li>
+            </ul><!-- end list -->
+            <a href="Educational.html" data-scroll class="btn btn-light btn-radius btn-brd">Jifunze Zaidi</a>
+        </div>
+    </div><!-- end col -->
+    <div class="col-md-6">
+        <div class="text-center image-center hidden-sm hidden-xs">
+            <img src="uploads/device_03.png" alt="" class="img-responsive wow fadeInUp" >
+        </div>
+    </div>
+    <br><br> 
+</div><!-- end row -->
+</div><!-- end container -->
+</div>
+<div id="Problem" class="section wb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="post-media wow fadeIn">
+                    <img src="uploads/about_02.jpg" alt="" class="img-responsive img-rounded">
+                </div><!-- end media -->
+            </div><!-- end col -->
+
+<div class="col-md-6">
+  <div class="message-box">
+    <h4>Changamoto Zinazokabili Kilimo</h4>
+    <h2>Hasara Baada ya Mavuno Kutokana na Uhifadhi Mbaya Tanzania</h2>
+    <p class="lead">
+      Moja ya changamoto kubwa katika kilimo Tanzania ni hasara kubwa ya matunda na mboga baada ya mavuno, hasa kutokana na uhifadhi duni.  
+      <br>
+      Bila udhibiti mzuri wa joto na unyevu, kiasi kikubwa cha mazao huharibika haraka, kusababisha hasara inayokadiriwa kufikia 30-40% ya mavuno yote.  
+      <br>
+      Hasara hizi si tu zinapunguza mapato ya wakulima bali pia zinachangia ukosefu wa usalama wa chakula na hali ya uchumi isiyo imara katika jamii za vijijini.
+    </p>
+    <br>
+    <a href="problem.html" class="btn btn-light btn-radius btn-brd grd1">Jifunze Zaidi</a>
+  </div><!-- end messagebox -->
+</div>
+
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+
+
+
+
+
+<div id="services" class="parallax section lb">
+    <div class="container">
+        <br><br>
+        <div class="section-title text-center">
+            <p class="first">Baadhi ya Bidhaa Zetu</p>
+            <h3 class="gg">Hapa unaweza kupata baadhi ya mazao yetu</h3>
+        </div><!-- end title -->
+
+        <div class="owl-services owl-carousel owl-theme">
+            <div class="service-widget">
+                <div class="post-media wow fadeIn">
+                    <a href="shop.html" class="hoverbutton global-radius"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <img src="Crops/Maize.jpeg" alt="" class="img-responsive img-rounded">
+                </div>
+                <div class="service-dit">
+                    <h3>Mahindi</h3>
+                    <p>Mahindi bora kutoka shambani Afrika.</p>
+                </div>
+            </div>
+            <!-- end service -->
+
+            <div class="service-widget">
+                <div class="post-media wow fadeIn">
+                    <a href="shop.html" class="hoverbutton global-radius"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <img src="Crops/Millet.jpeg" alt="" class="img-responsive img-rounded">
+                </div>
+                <div class="service-dit">
+                    <h3>Mtama</h3>
+                    <p>Inafaa kwa maeneo kame na jangwa.</p>
+                </div>
+            </div>
+            <!-- end service -->
+
+            <div class="service-widget">
+                <div class="post-media wow fadeIn">
+                    <a href="shop.html" class="hoverbutton global-radius"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <img src="Crops/Rice.jpg" alt="" class="img-responsive img-rounded">
+                </div>
+                <div class="service-dit">
+                    <h3>Mchele</h3>
+                    <p>Mchele bora wa Afrika kwa vyakula vyote.</p>
+                </div>
+            </div>
+            <!-- end service -->
+
+            <div class="service-widget">
+                <div class="post-media wow fadeIn">
+                    <a href="shop.html" class="hoverbutton global-radius"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <img src="Crops/Tomato.jpg" alt="" class="img-responsive img-rounded">
+                </div>
+                <div class="service-dit">
+                    <h3>Nyanya</h3>
+                    <p>Nyanya mpya na zenye maji.</p>
+                </div>
+            </div>
+            <!-- end service -->
+            <div class="service-widget">
+                <div class="post-media wow fadeIn">
+                    <a href="shop.html" class="hoverbutton global-radius"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <img src="Crops/Beans.jpg" alt="" class="img-responsive img-rounded">
+                </div>
+
+                <div class="service-dit">
+                    <h3>Maharagwe</h3>
+                    <p>Chanzo muhimu cha protini.</p>
+                </div>
+            </div>
+        </div><!-- end row -->
+<br></br>
+        <div class="text-center">
+            <a data-scroll href="shop.html" class="btn btn-light btn-radius btn-brd">Angalia Mazao Zaidi</a>
+        </div>
+        <br>
+    </div><!-- end container -->
+</div><!-- end section -->
+</div><!-- end section -->
+<!-- Footer Start -->
+
+<div class="section-title text-center">
+    <br>
+    <p class="first">Wasiliana Nasi</p>
+    <h3 class="gg">Hapa unaweza kupata taarifa kuhusu mradi wetu</h3>
+</div><!-- end title -->  
+  
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-left-title">
+      </div>
+      <input type="hidden" name="access_key" value="2be2bcca-3bb5-4a1f-b0dd-55825424429c">
+      <input type="text" name="Customer Name" placeholder="Jina lako" class="contact-input" required>
+      <input type="email" name="Customer Email" placeholder="Barua pepe yako" class="contact-input" required>
+      <input type="text" name="Customer Phone" pattern="[0-9]{10,}" placeholder="Nambari yako ya simu" class="contact-input" required>    
+      <textarea name="Customer Message" placeholder="Ujumbe wako" class="contact-input" required></textarea>
+      <button type="submit">tuma <img src="images/arrow_icon.png" alt=""> </button>
+    </form>
+    <div class="contact-right" style="float: right;">
+      ">
+    </div>
+  </div>
+    
+<!-- Footer Start -->
+
+<!-- End of .container -->
+
+  <!-- ALL JS FILES -->
+  <script src="js/all.js"></script>
+  <!-- ALL PLUGINS -->
+  <script src="js/custom.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/hoverdir.js"></script>    
+<br>
+<br>
+  
+<!-- Footer Start -->
+<!-- Site footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>Maono na Dhamira</h6>
+        <p class="text-justify">
+<p class="text-justify">
+Katika Green Aura, tunazingatia kupunguza upotevu baada ya mavuno nchini Tanzania kwa kutumia teknolojia smart ya kuhifadhi ambayo inadhibiti joto na unyevu. Dhamira yetu ni kusaidia wakulima wa Tanzania kuhifadhi mazao mapya kwa muda mrefu zaidi, kuboresha mapato yao na usalama wa chakula. Tulichagua Tanzania kwa sababu ya uwezo wake mkubwa wa kilimo na hitaji la haraka la suluhisho bora za kuhifadhi ili kuzuia uharibifu na upotevu katika jamii za vijijini.
+</p>
+
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Aina za Huduma</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Nyumbani</a></li>
+          <li><a href="Problem.html">Tatizo</a></li>
+          <li><a href="#">Huduma Zetu</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Viungo vya Haraka</h6>
+        <ul class="footer-links">
+          <li><a href="#about.html">Kuhusu Sisi</a></li>
+          <li><a href="info/Privacy Policy.pdf">Sera ya Faragha</a></li>
+          <li><a href="info/Cookies.pdf">Vidakuzi</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">
+          Haki Zote Zimelindwa na 
+          <a class="footer-links" href="https://api.whatsapp.com/send/?phone=201278697377">Green Aura</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/YaseeenAhmed?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/yaseeen_ahmeed?igsh=ODV0MnBwZTRyc3ht"><i class="fab fa-instagram fa-1x"></i></a></li>
+              <li><a class="whatsapp" href="https://api.whatsapp.com/send/?phone=201278697377"><i class="fab fa-whatsapp fa-1x"></i></a></li>
+              <li><a class="email" href="mailto:thekhedr123@gmail.com"><i class="fa fa-envelope fa-1x"></i></a></li>   
+          </ul>
+        </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

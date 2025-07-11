@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous" />
+
+    <!-- Site Metas -->
+    <title>Green Aura System</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button
+                      type="button"
+                      class="navbar-toggle collapsed"
+                      data-toggle="collapse"
+                      data-target="#navbar"
+                      aria-expanded="false"
+                      aria-controls="navbar"
+                    >
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="logo" class="navbar-brand" href="index.html"
+                      ><img src="images/logos/logo.png" alt="image"
+                    /></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a id="nav_item"  href="index-Kiswahili.html">Nyumbani</a></li>
+                        <li><a id="nav_item"  href="about-Kiswahili.html">Kuhusu</a></li>
+                        <li><a id="nav_item" href="problem-Kiswahili.html">Tatizo</a></li>
+                        <li><a id="nav_item" href="shop-Kiswahili.html">Duka</a></li>
+                        <li><a id="nav_item"   class="active" href="Farmer-Kiswahili.html">Mkulima</a></li>
+                        <li><a id="nav_item"class="active" href="Monitor-Kiswahili.html">Kisogezi</a></li>
+                        <li><a id="nav_item" href="Educational-Kiswahili.html">Elimu</a></li>
+                        <li><a id="nav_item" href="team-Kiswahili.html">Wajumbe wa Timu</a></li>
+				            		<li><a id="nav_item" href="contact-Kiswahili.html">Mawasiliano</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner-area banner-bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner">
+                        <h2>Monitor System</h2>
+                        <ul class="page-title-link">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Monitor System</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <p class="first">Monitor System</p>
+                <h3 class="gg">Here you can monitor your farm</h3>
+
+                <input
+                  type="text"
+                  name="Customer Name"
+                  placeholder="Your System IP"
+                  class="contact-input"
+                  required
+                  style="background: transparent; border: 2px solid #10a100; border-radius: 999px; color: #000; padding: 10px 20px; width: 100%; max-width: 400px; margin: 0 auto; display: block;"
+                />
+
+                <button
+                  onclick="loadSensorData()"
+                  class="btn btn-success"
+                  style="margin-top: 15px; border-radius: 999px; width: fit-content; padding: 8px 25px; display: block; margin-left: auto; margin-right: auto; background-color: #22b711; border: none;"
+                >
+                  Load Data
+                </button>
+
+                <br /><br />
+
+                <!-- Row 1 -->
+                <div class="row text-center" style="margin-bottom: 30px;">
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="roomTemp1Chart"></canvas>
+                        </div>
+                        <p><strong>Room Temperature 1</strong> – (°C)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="gasLevelsChart"></canvas>
+                        </div>
+                        <p><strong>Gas Levels</strong> – (ppm)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="humidityChart"></canvas>
+                        </div>
+                        <p><strong>Humidity</strong> – (%)</p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row text-center" style="margin-bottom: 30px;">
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="roomTemp2Chart"></canvas>
+                        </div>
+                        <p><strong>Room Temperature 2</strong> – (°C)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="waterLevelChart"></canvas>
+                        </div>
+                        <p><strong>Water Level</strong> – (%)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <canvas id="soilConductivityChart"></canvas>
+                        </div>
+                        <p><strong>Soil Electrical Conductivity</strong> – (mS/cm)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>Vision and Mission</h6>
+                    <p class="text-justify">
+                        At Green Aura, we focus on reducing post-harvest losses in Tanzania by using smart storage technology that controls temperature and humidity. Our mission is to support Tanzanian farmers in preserving fresh produce longer, improving their income and food security. We selected Tanzania for its rich agricultural potential and urgent need for better storage solutions to prevent spoilage and waste in local communities.
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Problem.html">The Problem</a></li>
+                        <li><a href="#">Our Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#about.html">About Us</a></li>
+                        <li><a href="info/Privacy Policy.pdf">Privacy Policy</a></li>
+                        <li><a href="info/Cookies.pdf">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                        Copyright &copy; 2024 All Rights Reserved by
+                        <a class="footer-links" href="https://api.whatsapp.com/send/?phone=201278697377">Green Aura</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li>
+                            <a class="facebook" href="https://www.facebook.com/YaseeenAhmed?mibextid=ZbWKwL"
+                              ><i class="fa fa-facebook"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="https://www.instagram.com/yaseeen_ahmeed?igsh=ODV0MnBwZTRyc3ht"
+                              ><i class="fab fa-instagram fa-1x"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=201278697377"
+                              ><i class="fab fa-whatsapp fa-1x"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a class="email" href="mailto:thekhedr123@gmail.com"
+                              ><i class="fa fa-envelope fa-1x"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS SCRIPTS -->
+    <script>
+        function createCircularChart(chartId, value, color = '#28a745') {
+            const ctx = document.getElementById(chartId).getContext('2d');
+            return new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [
+                        {
+                            data: [value, 100 - value],
+                            backgroundColor: [color, '#f5f5f5'],
+                            borderWidth: 0,
+                        },
+                    ],
+                },
+                options: {
+                    cutout: '70%',
+                    plugins: {
+                        tooltip: { enabled: false },
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: Math.round(value) + '%',
+                            font: { size: 14 },
+                            color: color,
+                            position: 'center',
+                        },
+                    },
+                },
+            });
+        }
+
+        function loadSensorData() {
+            // Sample data for demo - replace with real data fetched via system IP
+            const values = {
+                sensor1: 72, // Soil Moisture %
+                sensor2: 28, // Temperature °C (converted to 0-100%)
+                sensor3: 40, // Soil Salinity ppm (converted to %)
+                sensor4: 60, // Humidity %
+                sensor5: 80, // Light Intensity lux (converted to %)
+                sensor6: 6.5, // pH Level (0-14)
+                sensor7: 30, // Gas Levels ppm (converted to 0-100%)
+                sensor8: 55, // Water Level %
+                sensor9: 45, // Soil Electrical Conductivity (converted to %)
+            };
+
+            createCircularChart('sensor1Chart', values.sensor1);
+            createCircularChart('sensor2Chart', (values.sensor2 / 50) * 100); // Assuming 0-50°C range
+            createCircularChart('sensor3Chart', (values.sensor3 / 500) * 100); // Assuming 0-500 ppm range
+            createCircularChart('sensor4Chart', values.sensor4);
+            createCircularChart('sensor5Chart', (values.sensor5 / 1000) * 100);
+            createCircularChart('sensor6Chart', (values.sensor6 / 14) * 100);
+            createCircularChart('sensor7Chart', values.sensor7);
+            createCircularChart('sensor8Chart', values.sensor8);
+            createCircularChart('sensor9Chart', values.sensor9);
+        }
+
+        window.onload = function () {
+            // Initialize all charts with zero values on page load
+            for (let i = 1; i <= 9; i++) {
+                createCircularChart(`sensor${i}Chart`, 0);
+            }
+        };
+    </script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .container,
+        .container-fluid {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .chart-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .chart-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</body>
+
+</html>
